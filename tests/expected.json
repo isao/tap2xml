@@ -1,7 +1,8 @@
 {
   "tally": {
-    "total": "30",
-    "passed": "30"
+    "total": 30,
+    "passed": 30,
+    "failed": 0
   },
   "tests": [
     {
