@@ -1,0 +1,49 @@
+TAP version 13
+# index exports
+ok 1 should be equivalent
+# passthru exports
+ok 2 should be equivalent
+# missing command
+ok 3 err msg is wrong
+ok 4 should be equal
+ok 5 err msg obj is same
+ok 6 log stack empty
+# help
+ok 7 should be equal
+ok 8 missing command
+ok 9 should be equal
+ok 10 should be equal
+ok 11 should be equal
+ok 12 should be equal
+ok 13 should be equal
+ok 14 should be equal
+# version
+ok 15 should be equal
+ok 16 (unnamed assert)
+ok 17 should be equal
+ok 18 should be equal
+ok 19 (unnamed assert)
+ok 20 should be equal
+# fixme --version not treated as a bool flag
+ok 21 should be equal
+# create
+ok 22 should be equal
+# nonesuch
+ok 23 should be equal
+ok 24 should be equal
+# -cleanup-
+ok 25 (unnamed assert)
+ok 26 (unnamed assert)
+# someapp jslint
+ok 27 should be equal
+# cwd is not a mojito app dir
+ok 28 (unnamed assert)
+# fail case
+ok 29 should be equal
+ok 30 (unnamed assert)
+
+1..30
+# tests 30
+# pass  30
+
+# ok

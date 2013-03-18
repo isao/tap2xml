@@ -1,0 +1,218 @@
+{
+  "tally": {
+    "total": "30",
+    "passed": "30"
+  },
+  "tests": [
+    {
+      "testname": "index exports",
+      "testnum": "1",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equivalent\n"
+    },
+    {
+      "testname": "passthru exports",
+      "testnum": "2",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equivalent\n"
+    },
+    {
+      "testname": "missing command",
+      "testnum": "3",
+      "duration": 1,
+      "result": "pass",
+      "message": "err msg is wrong\n"
+    },
+    {
+      "testname": "missing command",
+      "testnum": "4",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equal\n"
+    },
+    {
+      "testname": "missing command",
+      "testnum": "5",
+      "duration": 1,
+      "result": "pass",
+      "message": "err msg obj is same\n"
+    },
+    {
+      "testname": "missing command",
+      "testnum": "6",
+      "duration": 1,
+      "result": "pass",
+      "message": "log stack empty\n"
+    },
+    {
+      "testname": "help",
+      "testnum": "7",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equal\n"
+    },
+    {
+      "testname": "help",
+      "testnum": "8",
+      "duration": 1,
+      "result": "pass",
+      "message": "missing command\n"
+    },
+    {
+      "testname": "help",
+      "testnum": "9",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equal\n"
+    },
+    {
+      "testname": "help",
+      "testnum": "10",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equal\n"
+    },
+    {
+      "testname": "help",
+      "testnum": "11",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equal\n"
+    },
+    {
+      "testname": "help",
+      "testnum": "12",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equal\n"
+    },
+    {
+      "testname": "help",
+      "testnum": "13",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equal\n"
+    },
+    {
+      "testname": "help",
+      "testnum": "14",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equal\n"
+    },
+    {
+      "testname": "version",
+      "testnum": "15",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equal\n"
+    },
+    {
+      "testname": "version",
+      "testnum": "16",
+      "duration": 1,
+      "result": "pass",
+      "message": "(unnamed assert)\n"
+    },
+    {
+      "testname": "version",
+      "testnum": "17",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equal\n"
+    },
+    {
+      "testname": "version",
+      "testnum": "18",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equal\n"
+    },
+    {
+      "testname": "version",
+      "testnum": "19",
+      "duration": 1,
+      "result": "pass",
+      "message": "(unnamed assert)\n"
+    },
+    {
+      "testname": "version",
+      "testnum": "20",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equal\n"
+    },
+    {
+      "testname": "fixme --version not treated as a bool flag",
+      "testnum": "21",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equal\n"
+    },
+    {
+      "testname": "create",
+      "testnum": "22",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equal\n"
+    },
+    {
+      "testname": "nonesuch",
+      "testnum": "23",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equal\n"
+    },
+    {
+      "testname": "nonesuch",
+      "testnum": "24",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equal\n"
+    },
+    {
+      "testname": "-cleanup-",
+      "testnum": "25",
+      "duration": 1,
+      "result": "pass",
+      "message": "(unnamed assert)\n"
+    },
+    {
+      "testname": "-cleanup-",
+      "testnum": "26",
+      "duration": 1,
+      "result": "pass",
+      "message": "(unnamed assert)\n"
+    },
+    {
+      "testname": "someapp jslint",
+      "testnum": "27",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equal\n"
+    },
+    {
+      "testname": "cwd is not a mojito app dir",
+      "testnum": "28",
+      "duration": 1,
+      "result": "pass",
+      "message": "(unnamed assert)\n"
+    },
+    {
+      "testname": "fail case",
+      "testnum": "29",
+      "duration": 1,
+      "result": "pass",
+      "message": "should be equal\n"
+    },
+    {
+      "testname": "fail case",
+      "testnum": "30",
+      "duration": 1,
+      "result": "pass",
+      "message": "(unnamed assert)\n"
+    }
+  ]
+}
