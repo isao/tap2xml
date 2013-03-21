@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report name="report name" total="{{total}}" passed="{{passed}}" failed="{{failed}}" ignored="0" duration="1">
+  <testcase name="casename" total="{{total}}" passed="{{passed}}" failed="{{failed}}" ignored="0" duration="1">
+    {{#tests}}<test name="{{testnum}} {{testname}}" result="{{result}}" message="{{message}}" duration="1">{{body}}</test>
+    {{/tests}}
+  </testcase>
+</report>

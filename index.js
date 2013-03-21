@@ -3,16 +3,14 @@
     parse tap test results from stdin, emit junit/xunit-like xml on stdout
 */
 var parser = require('./tap-parse'),
-    xmlout = require('./xml-out'),
+    xmlify = require('./xml-out'),
     buffer = '';
 
 
-function xmlify(err, results) {
-    console.log(JSON.stringify(results, null, 2));
-}
-
 function parse() {
-    parser(buffer.split('\n'), xmlify);
+    parser(buffer.split('\n'), function(err, data) {
+    	process.stdout.write(xmlify(data));
+    });
 }
 
 function ondata(chunk) {
