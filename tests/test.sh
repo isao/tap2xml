@@ -1,6 +1,6 @@
 #!/bin/sh -ex
 cd $(dirname $0)
 
-node ../index.js < ./fixture.tap > ./actual.json
+node ../ < fixtures/sample.tap > expected.xml
 
-diff ./expected.json ./actual.json
+diff ./expected.xml ./actual.xml
