@@ -15,7 +15,8 @@ var tallymap = {
     ],
     testname,
     tests,
-    tally;
+    tally,
+    notmatch = [];
 
 
 function noop() {
@@ -34,24 +35,22 @@ function results(m) {
     var test = {
         testname: testname,
         testnum: m[2],
-        duration: 1,
         result: 'ok' === m[1] ? 'pass' : 'fail',
-        message: m[3] + '\n'
+        message: m[3],
+        body: null,
     };
     tests.push(test);
+    if(notmatch.length > 1) {
+    	tests[tests.length - 2].body = notmatch.join('\n');
+    	notmatch = [];
+    }
 }
 
 function parse(line) {
-    var match,
-        notmatch = [];
+    var match;
 
     function perrule(rule) {
         if(match = line.match(rule.re)) {
-            if(tests.length && notmatch.length) {
-                //unmatched lines belong with previous test message
-                tests[tests.length - 1].message += notmatch.join('\n');
-                notmatch = [];
-            }
             rule.fn(match);
             return true;
         }
