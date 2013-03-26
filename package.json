@@ -12,7 +12,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo nonesuch && exit 1"
+    "test": "./tests/test.sh"
   },
   "repository": "",
   "author": "",
