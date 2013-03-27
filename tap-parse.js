@@ -6,13 +6,7 @@ var tallymap = {
         pass: 'passed',
         fail: 'failed'
     },
-    lineproc = [
-        {fn: counts,  re: /^# (tests|pass|fail) +(\d+)/},
-        {fn: names,   re: /^# (.+)$/},
-        {fn: results, re: /^(ok|not ok) (\d+) (.+)/},
-        {fn: noop,    re: /^\d+[.]{2}\d+$/ }, // i.e. 1..34 -> 34 tests expected
-        {fn: noop,    re: /TAP version \d+/ } // header
-    ],
+    lineproc,
     testname,
     tests,
     tally,
@@ -41,8 +35,8 @@ function results(m) {
     };
     tests.push(test);
     if(notmatch.length > 1) {
-    	tests[tests.length - 2].body = notmatch.join('\n');
-    	notmatch = [];
+        tests[tests.length - 2].body = notmatch.join('\n');
+        notmatch = [];
     }
 }
 
@@ -50,7 +44,8 @@ function parse(line) {
     var match;
 
     function perrule(rule) {
-        if(match = line.match(rule.re)) {
+        match = line.match(rule.re);
+        if(match) {
             rule.fn(match);
             return true;
         }
@@ -61,6 +56,14 @@ function parse(line) {
         notmatch.push(line);
     }
 }
+
+lineproc = [
+    {fn: counts,  re: /^# (tests|pass|fail) +(\d+)/},
+    {fn: names,   re: /^# (.+)$/},
+    {fn: results, re: /^(ok|not ok) (\d+) (.+)/},
+    {fn: noop,    re: /^\d+[.]{2}\d+$/ }, // i.e. 1..34 -> 34 tests expected
+    {fn: noop,    re: /TAP version \d+/ } // header
+];
 
 function main(lines, cb) {
     testname = '';
