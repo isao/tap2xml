@@ -2,8 +2,7 @@
     parse tap test results line-by-line
 */
 
-var tallymap = {tests: 'total', pass: 'passed', fail: 'failed'},
-    rules = [
+var rules = [
         {fn: 'counts',  re: /^# (tests|pass|fail) +(\d+)/},
         {fn: 'names',   re: /^# (.+)$/},
         {fn: 'results', re: /^(ok|not ok) (\d+) (.+)/},
@@ -20,8 +19,7 @@ function Tap2js() {
 }
 
 Tap2js.prototype.counts = function counts(m) {
-    var type = tallymap[m[1]];
-    this.tally[type] = +m[2];
+    this.tally[m[1]] = +m[2];
 };
 
 Tap2js.prototype.names = function names(m) {
@@ -30,10 +28,10 @@ Tap2js.prototype.names = function names(m) {
 
 Tap2js.prototype.results = function results(m) {
     var test = {
-            testname: this.testname,
-            testnum: m[2],
-            result: 'ok' === m[1] ? 'pass' : 'fail',
-            message: m[3],
+            name: this.testname,
+            num: +m[2],
+            pass: 'ok' === m[1],
+            msg: m[3],
             body: null,
         };
 
