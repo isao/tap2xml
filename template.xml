@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<report name="report name" total="{{total}}" passed="{{passed}}" failed="{{failed}}" ignored="0" duration="1">
-    <testcase name="casename" total="{{total}}" passed="{{passed}}" failed="{{failed}}" ignored="0" duration="1">{{#tests}}
-        <test result="{{result}}" name="{{testnum}} {{testname}}" message="{{message}}" duration="1">
+<testsuite tests="{{tests}}" failures="{{fail}}" name="tapsuite" errors="0" skipped="0" time="0.{{total}}">{{#cases}}{{#if pass}}
+    <testcase name="{{num}} {{name}}" time="0.1" />{{else}}
+    <testcase name="{{num}} {{name}}" time="0.1" />
+        <failure>
 {{body}}
-        </test>{{/tests}}
-    </testcase>
-</report>
+        </failure>
+    </testcase>{{/if}}{{/cases}}
+</testsuite>

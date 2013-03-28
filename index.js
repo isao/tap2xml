@@ -15,5 +15,7 @@ process.stdin
     .on('data', parse.line.bind(parse));
 
 process.stdin.on('end', function() {
-    console.log(parse.cases, parse.tally);
+    var data = parse.tally;
+    data.cases = parse.cases;
+    process.stdout.write(xmlify(data));
 });
