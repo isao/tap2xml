@@ -1,51 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<report name="report name" total="" passed="" failed="" ignored="0" duration="1">
-    <testcase name="casename" total="" passed="" failed="" ignored="0" duration="1">
-        <test result="pass" name="1 named route" message="match dir, file" duration="1">
-
-        </test>
-        <test result="fail" name="2 named route" message="should not have any params" duration="1">
+<testsuite tests="12" failures="2" name="tapsuite" errors="0" skipped="0" time="0.">
+    <testcase name="1 named route" time="0.1" />
+    <testcase name="2 named route" time="0.1" />
+        <failure>
   ---
     operator: deepEqual
     expected: []
     actual:   [&#x27;failmaker&#x27;]
     at: EventEmitter._cb (/Users/isao/Repos/wip/byway/tests/examples.js:16:7)
   ...
-        </test>
-        <test result="fail" name="3 named route" message="dir and file match" duration="1">
+        </failure>
+    </testcase>
+    <testcase name="3 named route" time="0.1" />
+        <failure>
   ---
     operator: deepEqual
     expected: {&quot;dir&quot;:&quot;cannot&quot;,&quot;file&quot;:&quot;drive55&quot;}
     actual:   {&quot;dir&quot;:&quot;cannot&quot;,&quot;file&quot;:&quot;hubbawha&quot;}
     at: EventEmitter._cb (/Users/isao/Repos/wip/byway/tests/examples.js:17:7)
   ...
-        </test>
-        <test result="pass" name="4 named spot route to match any non-space run of text" message="should be equivalent" duration="1">
-
-        </test>
-        <test result="pass" name="5 named spot route to match any non-space run of text" message="should be equivalent" duration="1">
-
-        </test>
-        <test result="pass" name="6 named spot route to match any non-space run of text" message="should be equivalent" duration="1">
-
-        </test>
-        <test result="pass" name="7 string regex route, if you need to use json or love backslashes" message="should be equivalent" duration="1">
-
-        </test>
-        <test result="pass" name="8 string regex route, if you need to use json or love backslashes" message="should be equivalent" duration="1">
-
-        </test>
-        <test result="pass" name="9 string regex route, if you need to use json or love backslashes" message="should be equivalent" duration="1">
-
-        </test>
-        <test result="pass" name="10 literal regex route" message="should be equivalent" duration="1">
-
-        </test>
-        <test result="pass" name="11 literal regex route" message="should be equivalent" duration="1">
-
-        </test>
-        <test result="pass" name="12 literal regex route" message="should be equivalent" duration="1">
-
-        </test>
+        </failure>
     </testcase>
-</report>
+    <testcase name="4 named spot route to match any non-space run of text" time="0.1" />
+    <testcase name="5 named spot route to match any non-space run of text" time="0.1" />
+    <testcase name="6 named spot route to match any non-space run of text" time="0.1" />
+    <testcase name="7 string regex route, if you need to use json or love backslashes" time="0.1" />
+    <testcase name="8 string regex route, if you need to use json or love backslashes" time="0.1" />
+    <testcase name="9 string regex route, if you need to use json or love backslashes" time="0.1" />
+    <testcase name="10 literal regex route" time="0.1" />
+    <testcase name="11 literal regex route" time="0.1" />
+    <testcase name="12 literal regex route" time="0.1" />
+</testsuite>
