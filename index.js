@@ -2,22 +2,18 @@
 /*
     parse tap test results from stdin, emit junit/xunit-like xml on stdout
 */
-var parser = require('./tap-parse'),
+var split = require('split'),
+    Tap2js = require('./tap-parse'),
     xmlify = require('./xml-out'),
-    buffer = '';
-
-
-function parse() {
-    parser(buffer.split('\n'), function(err, data) {
-    	process.stdout.write(xmlify(data));
-    });
-}
-
-function ondata(chunk) {
-    buffer += chunk;
-}
+    parse = new Tap2js();
 
 process.stdin.resume();
 process.stdin.setEncoding('utf8');
-process.stdin.on('data', ondata);
-process.stdin.on('end', parse);
+
+process.stdin
+    .pipe(split())
+    .on('data', parse.line.bind(parse));
+
+process.stdin.on('end', function() {
+    console.log(parse.cases, parse.tally);
+});
