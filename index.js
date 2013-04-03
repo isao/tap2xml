@@ -2,22 +2,23 @@
 /*
     parse tap test results from stdin, emit junit/xunit-like xml on stdout
 */
-var parser = require('./tap-parse'),
-    xmlify = require('./xml-out'),
-    buffer = '';
+var resolve = require('path').resolve,
+    split = require('split'),
+    xmlify = require('./render-xml'),
+    Tap2js = require('./parse-tap'),
+    parse = new Tap2js();
 
-
-function parse() {
-    parser(buffer.split('\n'), function(err, data) {
-    	process.stdout.write(xmlify(data));
-    });
-}
-
-function ondata(chunk) {
-    buffer += chunk;
-}
 
 process.stdin.resume();
 process.stdin.setEncoding('utf8');
-process.stdin.on('data', ondata);
-process.stdin.on('end', parse);
+
+process.stdin
+    .pipe(split())
+    .on('data', parse.line.bind(parse));
+
+process.stdin.on('end', function() {
+    var data = parse.tally;
+    data.cases = parse.cases;
+
+    process.stdout.write(xmlify(data, resolve(__dirname, 'xunit.tmpl.xml')));
+});
