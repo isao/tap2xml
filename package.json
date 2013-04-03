@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "parse tap test results from stdin, emit junit/xunit-like xml on stdout. no attempt has been made to fully support tap or junit xml yet, but just get ci reportinmg for my simple use cases",
   "main": "index.js",
+  "bin": "index.js",
   "directories": {
     "test": "tests"
   },
