@@ -4,9 +4,8 @@
 */
 var resolve = require('path').resolve,
     split = require('split'),
-    Tap2js = require('./parse-tap'),
     xmlify = require('./render-xml'),
-
+    Tap2js = require('./parse-tap'),
     parse = new Tap2js();
 
 

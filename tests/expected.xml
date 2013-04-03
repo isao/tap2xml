@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testsuite tests="12" failures="2" name="tapsuite" errors="0" skipped="0" time="0.12">
-    <testcase name="named route - 1 match dir, file" time="0.1" />
-    <testcase name="named route - 2 should not have any params" time="0.1" />
+    <testcase name="named route - 1 match dir, file" time="0.1">
+    </testcase>
+    <testcase name="named route - 2 should not have any params" time="0.1">
         <failure>
   ---
     operator: deepEqual
@@ -11,7 +12,7 @@
   ...
         </failure>
     </testcase>
-    <testcase name="named route - 3 dir and file match" time="0.1" />
+    <testcase name="named route - 3 dir and file match" time="0.1">
         <failure>
   ---
     operator: deepEqual
@@ -21,13 +22,22 @@
   ...
         </failure>
     </testcase>
-    <testcase name="named spot route to match any non-space run of text - 4 should be equivalent" time="0.1" />
-    <testcase name="named spot route to match any non-space run of text - 5 should be equivalent" time="0.1" />
-    <testcase name="named spot route to match any non-space run of text - 6 should be equivalent" time="0.1" />
-    <testcase name="string regex route, if you need to use json or love backslashes - 7 should be equivalent" time="0.1" />
-    <testcase name="string regex route, if you need to use json or love backslashes - 8 should be equivalent" time="0.1" />
-    <testcase name="string regex route, if you need to use json or love backslashes - 9 should be equivalent" time="0.1" />
-    <testcase name="literal regex route - 10 should be equivalent" time="0.1" />
-    <testcase name="literal regex route - 11 should be equivalent" time="0.1" />
-    <testcase name="literal regex route - 12 should be equivalent" time="0.1" />
+    <testcase name="named spot route to match any non-space run of text - 4 should be equivalent" time="0.1">
+    </testcase>
+    <testcase name="named spot route to match any non-space run of text - 5 should be equivalent" time="0.1">
+    </testcase>
+    <testcase name="named spot route to match any non-space run of text - 6 should be equivalent" time="0.1">
+    </testcase>
+    <testcase name="string regex route, if you need to use json or love backslashes - 7 should be equivalent" time="0.1">
+    </testcase>
+    <testcase name="string regex route, if you need to use json or love backslashes - 8 should be equivalent" time="0.1">
+    </testcase>
+    <testcase name="string regex route, if you need to use json or love backslashes - 9 should be equivalent" time="0.1">
+    </testcase>
+    <testcase name="literal regex route - 10 should be equivalent" time="0.1">
+    </testcase>
+    <testcase name="literal regex route - 11 should be equivalent" time="0.1">
+    </testcase>
+    <testcase name="literal regex route - 12 should be equivalent" time="0.1">
+    </testcase>
 </testsuite>
