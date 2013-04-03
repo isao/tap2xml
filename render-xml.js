@@ -2,10 +2,8 @@ var read = require('fs').readFileSync,
     hb = require('handlebars');
 
 
-function main(data) {
-    var tmpl = __dirname + '/template.xml',
-        hbjs = hb.compile(read(tmpl, 'utf-8'));
-
+function main(data, template) {
+    var hbjs = hb.compile(read(template, 'utf-8'));
     return hbjs(data);
 }
 

@@ -38,7 +38,7 @@ Tap2js.prototype.results = function results(m) {
     // save test result
     this.cases.push(test);
 
-    // unmatched lines, if any, get appended to last test's body
+    // unmatched lines, if any, go with the last test's body
     if(this.notmatch.length > 1) {
         this.cases[this.cases.length - 2].body = this.notmatch.join('\n');
         this.notmatch = [];
