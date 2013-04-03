@@ -5,7 +5,9 @@
 var split = require('split'),
     Tap2js = require('./tap-parse'),
     xmlify = require('./xml-out'),
+
     parse = new Tap2js();
+
 
 process.stdin.resume();
 process.stdin.setEncoding('utf8');

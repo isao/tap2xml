@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<testsuite tests="{{tests}}" failures="{{fail}}" name="tapsuite" errors="0" skipped="0" time="0.{{total}}">{{#cases}}{{#if pass}}
-    <testcase name="{{num}} {{name}}" time="0.1" />{{else}}
-    <testcase name="{{num}} {{name}}" time="0.1" />
+<testsuite tests="{{tests}}" failures="{{fail}}" name="tapsuite" errors="0" skipped="0" time="0.{{tests}}">{{#cases}}{{#if pass}}
+    <testcase name="{{name}} - {{num}} {{msg}}" time="0.1" />{{else}}
+    <testcase name="{{name}} - {{num}} {{msg}}" time="0.1" />
         <failure>
 {{body}}
         </failure>
