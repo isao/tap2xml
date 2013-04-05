@@ -14,12 +14,17 @@ var rules = [
 function Tap2js() {
     this.testname = ''; //tmp
     this.notmatch = []; //tmp
-    this.cases = [];    //results
-    this.tally = {};    //result summary
+    this.data = {       //results
+        tests: 0,
+        pass: 0,
+        fail: 0,
+        cases: []
+    },
+    this.cases = this.data.cases; //shortcut
 }
 
 Tap2js.prototype.counts = function counts(m) {
-    this.tally[m[1]] = +m[2];
+    this.data[m[1]] = +m[2];
 };
 
 Tap2js.prototype.names = function names(m) {

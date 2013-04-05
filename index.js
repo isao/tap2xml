@@ -2,7 +2,7 @@
 /*
     parse tap test results from stdin, emit junit/xunit-like xml on stdout
 */
-var resolve = require('path').resolve,
+var templ = require('path').resolve(__dirname, 'xunit.tmpl.xml'),
     split = require('split'),
     xmlify = require('./render-xml'),
     Tap2js = require('./parse-tap'),
@@ -17,8 +17,5 @@ process.stdin
     .on('data', parse.line.bind(parse));
 
 process.stdin.on('end', function() {
-    var data = parse.tally;
-    data.cases = parse.cases;
-
-    process.stdout.write(xmlify(data, resolve(__dirname, 'xunit.tmpl.xml')));
+    process.stdout.write(xmlify(parse.data, templ));
 });
