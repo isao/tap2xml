@@ -8,7 +8,10 @@ var rules = [
         {fn: 'results', re: /^(ok|not ok) (\d+) (.+)/},
         {fn: null,      re: /^\d+[.]{2}\d+$/ }, // i.e. 1..34 -> 34 tests
         {fn: null,      re: /TAP version \d+/ } // header
-    ];
+    ],
+
+    // match terminal ansi color codes @rkthkr http://serverfault.com/a/71289
+    ANSI_RE = /\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]/g;
 
 
 function Tap2js() {
@@ -67,7 +70,8 @@ Tap2js.prototype.line = function(str) {
 
     // unmatched lines belong with previous testname
     if(!match) {
-        this.notmatch.push(str);
+        // strip terminal ansi escape codes
+        this.notmatch.push(str.replace(ANSI_RE, ''));
     }
 };
 
