@@ -1,7 +1,7 @@
 {
   "name": "tap2xml",
   "version": "0.0.1",
-  "description": "parse tap test results from stdin, emit junit/xunit-like xml on stdout. no attempt has been made to fully support tap or junit xml yet, but just get ci reportinmg for my simple use cases",
+  "description": "parse tap test results from stdin and emit junit/xunit-like xml on stdout, more or less.",
   "main": "index.js",
   "bin": "index.js",
   "directories": {

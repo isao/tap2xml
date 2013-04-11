@@ -1,7 +1,14 @@
 #!/usr/bin/env node
 /*
+ * Copyright (c) 2013 Yahoo! Inc.  All rights reserved.
+ * Copyrights licensed under the MIT License.
+ * See the accompanying LICENSE file for terms.
+ */
+
+/*
     parse tap test results from stdin, emit junit/xunit-like xml on stdout
 */
+
 var hbtpl = require('path').resolve(__dirname, 'xunit.hb.xml'),
     split = require('split'),
     xmlify = require('./render-xml'),
