@@ -1,6 +1,7 @@
-#!/bin/sh -ex
+#!/bin/sh
+
 cd $(dirname $0)
 
-node ../ < fixtures/sample.tap > actual.xml
+node .. < fixtures/sample.tap > actual.xml
 
-diff ./expected.xml ./actual.xml
+cmp -s expected.xml actual.xml && echo pass
