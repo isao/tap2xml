@@ -1,7 +1,7 @@
 tap2xml
 =======
 
-A naive tap to junit converter. Parses tap test results from stdin, emit junit/xunit-like xml on stdout. See ./tests.
+Parse [tap](https://github.com/isaacs/node-tap) test results from stdin and emit junit/xunit-like xml on stdout. More or less. See ./tests.
 
 
 License

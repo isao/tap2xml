@@ -1,9 +1,11 @@
 {
   "name": "tap2xml",
   "version": "0.0.1",
-  "description": "parse tap test results from stdin and emit junit/xunit-like xml on stdout, more or less.",
+  "description": "parse tap test results from stdin and emit junit/xunit-like xml on stdout. more or less.",
   "main": "index.js",
-  "bin": "index.js",
+  "bin": {
+    "tap2xml": "index.js"
+  },
   "directories": {
     "test": "tests"
   },
@@ -15,8 +17,20 @@
   "scripts": {
     "test": "./tests/test.sh"
   },
-  "repository": "",
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/isao/tap2xml.git"
+  },
+  "author": "Isao Yagi",
   "license": "MIT",
-  "gitHead": "69152158724200c63e847cb85764642e5013cb05"
+  "gitHead": "69152158724200c63e847cb85764642e5013cb05",
+  "readmeFilename": "README.md",
+  "keywords": [
+    "tap",
+    "test",
+    "report",
+    "convert",
+    "junit",
+    "xunit"
+  ]
 }
