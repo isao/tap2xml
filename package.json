@@ -10,7 +10,7 @@
     "test": "tests"
   },
   "dependencies": {
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.7.3",
     "split": "~0.2.1"
   },
   "devDependencies": {},
