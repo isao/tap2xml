@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "handlebars": "^4.7.3",
-    "split": "~0.2.1"
+    "split": "^1.0.1"
   },
   "devDependencies": {},
   "scripts": {
